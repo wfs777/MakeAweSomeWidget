@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "65424CB0-6884-4938-AC41-AFF1CF59F883"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11B9E216-FA7A-460F-9B7C-E60D785DD5FF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MakeAwesomeWidget/Manager/DataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchNewStatus()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F742A90A-F6C0-4054-84BB-CB04916D72E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AwesomeWidgetExtension/AwesomeWidgetExtension.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "timeline(for:in:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F742A90A-F6C0-4054-84BB-CB04916D72E2 - 47f8d4eca1431a57"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for AwesomeWidgetExtensionExtension.Provider.timeline(for: AwesomeWidgetExtensionExtension.RefreshAppIntent, in: WidgetKit.TimelineProviderContext) async -&gt; WidgetKit.Timeline&lt;AwesomeWidgetExtensionExtension.StatusEntry&gt;"
+                  moduleName = "AwesomeWidgetExtensionExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhuruiqi6/Developer/iOSProject/MakeAwesomeWidget/AwesomeWidgetExtension/AwesomeWidgetExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+               <Location
+                  uuid = "F742A90A-F6C0-4054-84BB-CB04916D72E2 - 130447bda47f29db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for AwesomeWidgetExtensionExtension.Provider.timeline(for: AwesomeWidgetExtensionExtension.ConfigurationAppIntent, in: WidgetKit.TimelineProviderContext) async -&gt; WidgetKit.Timeline&lt;AwesomeWidgetExtensionExtension.StatusEntry&gt;"
+                  moduleName = "AwesomeWidgetExtensionExtension.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhuruiqi6/Developer/iOSProject/MakeAwesomeWidget/AwesomeWidgetExtension/AwesomeWidgetExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
