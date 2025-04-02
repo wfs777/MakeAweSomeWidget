@@ -6,33 +6,234 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2F07AE572DB881E500501BA5 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F07AE562DB881E500501BA5 /* Intents.framework */; };
+		2F07AE6F2DB881E600501BA5 /* AwesomeWidgetIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F07AE552DB881E500501BA5 /* AwesomeWidgetIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2F59223F2DB9C29A0061416B /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F07AE562DB881E500501BA5 /* Intents.framework */; };
+		2F75BAED2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
+		2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F75BAF02DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
+		2F75BAF12DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F75BAF42DA92E1900F60526 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F75BAF32DA92E1900F60526 /* loading.gif */; };
+		2F9A52182D9D102A005B2FDE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9A52172D9D102A005B2FDE /* WidgetKit.framework */; };
+		2F9A521A2D9D102A005B2FDE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9A52192D9D102A005B2FDE /* SwiftUI.framework */; };
+		2F9A52292D9D102C005B2FDE /* AwesomeWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2F07AE6D2DB881E600501BA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F9A51F82D9D0FFC005B2FDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F07AE542DB881E500501BA5;
+			remoteInfo = AwesomeWidgetIntents;
+		};
+		2F9A52272D9D102C005B2FDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2F9A51F82D9D0FFC005B2FDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2F9A52142D9D102A005B2FDE;
+			remoteInfo = AwesomeWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2F75BAEF2DA8FDF300F60526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F75BAF22DA8FDF800F60526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F75BAF12DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9A522E2D9D102C005B2FDE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2F07AE6F2DB881E600501BA5 /* AwesomeWidgetIntents.appex in Embed Foundation Extensions */,
+				2F9A52292D9D102C005B2FDE /* AwesomeWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2F07AE552DB881E500501BA5 /* AwesomeWidgetIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F07AE562DB881E500501BA5 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		2F07AE612DB881E600501BA5 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ClockHandRotationKit.xcframework; sourceTree = "<group>"; };
+		2F75BAF32DA92E1900F60526 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		2F9A52002D9D0FFC005B2FDE /* MakeAwesomeWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeAwesomeWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F9A52172D9D102A005B2FDE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		2F9A52192D9D102A005B2FDE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2F07AE2E2DB78AB100501BA5 /* Exceptions for "AwesomeWidgetExtension" folder in "AwesomeWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				APIService.swift,
+				Assets.xcassets,
+				AwesomeWidget/AppIntent.swift,
+				AwesomeWidget/AwesomeWidgetExtension.swift,
+				AwesomeWidgetExtensionBundle.swift,
+				"Extensions/Date+.swift",
+				Extensions/GIFImageView.swift,
+				"Extensions/UIImage+.swift",
+				"Extensions/View+.swift",
+				OldVersionWidget/MyCarControlWidget.swift,
+				OldVersionWidget/WidgetConfigIntent.intentdefinition,
+				RequestStatusWidget/RequestStatusWidget.swift,
+				RequestStatusWidget/TriggerRequestIntent.swift,
+				SortableWidget/SortableItem.swift,
+				SortableWidget/SortableWidget.swift,
+				SortableWidget/SotableWidgetConfigIntent.swift,
+			);
+			target = 2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */;
+		};
+		2F07AE792DB8823900501BA5 /* Exceptions for "AwesomeWidgetExtension" folder in "AwesomeWidgetIntents" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				OldVersionWidget/WidgetConfigIntent.intentdefinition,
+			);
+			target = 2F07AE542DB881E500501BA5 /* AwesomeWidgetIntents */;
+		};
+		2FD0C7772DB8DD3B007AF066 /* Exceptions for "AwesomeWidgetExtension" folder in "MakeAwesomeWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AwesomeWidgetExtensionBundle.swift,
+				Info.plist,
+				OldVersionWidget/MyCarControlWidget.swift,
+			);
+			target = 2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */;
+		};
+		2FD0C77A2DB8DE6E007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "AwesomeWidgetIntents" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2F07AE542DB881E500501BA5 /* AwesomeWidgetIntents */;
+		};
+		2FD0C77B2DB8DE71007AF066 /* Exceptions for "MakeAwesomeWidget" folder in "MakeAwesomeWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */;
+		};
+		2FD0C7822DB8E2CF007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "AwesomeWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				IntentHandler.swift,
+			);
+			target = 2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */;
+		};
+		2FD0C7842DB8E3E9007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "MakeAwesomeWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				IntentHandler.swift,
+			);
+			target = 2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		2F9A52022D9D0FFC005B2FDE /* MakeAwesomeWidget */ = {
+		2F07AE192DB78AB100501BA5 /* AwesomeWidgetExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2FD0C7772DB8DD3B007AF066 /* Exceptions for "AwesomeWidgetExtension" folder in "MakeAwesomeWidget" target */,
+				2F07AE2E2DB78AB100501BA5 /* Exceptions for "AwesomeWidgetExtension" folder in "AwesomeWidgetExtensionExtension" target */,
+				2F07AE792DB8823900501BA5 /* Exceptions for "AwesomeWidgetExtension" folder in "AwesomeWidgetIntents" target */,
+			);
+			path = AwesomeWidgetExtension;
+			sourceTree = "<group>";
+		};
+		2F07AE582DB881E500501BA5 /* AwesomeWidgetIntents */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2FD0C7842DB8E3E9007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "MakeAwesomeWidget" target */,
+				2FD0C7822DB8E2CF007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "AwesomeWidgetExtensionExtension" target */,
+				2FD0C77A2DB8DE6E007AF066 /* Exceptions for "AwesomeWidgetIntents" folder in "AwesomeWidgetIntents" target */,
+			);
+			path = AwesomeWidgetIntents;
+			sourceTree = "<group>";
+		};
+		2F07AF0D2DB8DC7A00501BA5 /* MakeAwesomeWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2FD0C77B2DB8DE71007AF066 /* Exceptions for "MakeAwesomeWidget" folder in "MakeAwesomeWidget" target */,
+			);
 			path = MakeAwesomeWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2F07AE522DB881E500501BA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F07AE572DB881E500501BA5 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9A51FD2D9D0FFC005B2FDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F75BAF02DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9A52122D9D102A005B2FDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9A521A2D9D102A005B2FDE /* SwiftUI.framework in Frameworks */,
+				2F75BAED2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Frameworks */,
+				2F59223F2DB9C29A0061416B /* Intents.framework in Frameworks */,
+				2F9A52182D9D102A005B2FDE /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F75BAD52DA8F65800F60526 /* ThridLib */ = {
+			isa = PBXGroup;
+			children = (
+				2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */,
+			);
+			path = ThridLib;
+			sourceTree = "<group>";
+		};
 		2F9A51F72D9D0FFC005B2FDE = {
 			isa = PBXGroup;
 			children = (
-				2F9A52022D9D0FFC005B2FDE /* MakeAwesomeWidget */,
+				2F75BAD52DA8F65800F60526 /* ThridLib */,
+				2F07AF0D2DB8DC7A00501BA5 /* MakeAwesomeWidget */,
+				2F07AE192DB78AB100501BA5 /* AwesomeWidgetExtension */,
+				2F75BAF32DA92E1900F60526 /* loading.gif */,
+				2F07AE582DB881E500501BA5 /* AwesomeWidgetIntents */,
+				2F9A52162D9D102A005B2FDE /* Frameworks */,
 				2F9A52012D9D0FFC005B2FDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,13 +242,48 @@
 			isa = PBXGroup;
 			children = (
 				2F9A52002D9D0FFC005B2FDE /* MakeAwesomeWidget.app */,
+				2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */,
+				2F07AE552DB881E500501BA5 /* AwesomeWidgetIntents.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2F9A52162D9D102A005B2FDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F9A52172D9D102A005B2FDE /* WidgetKit.framework */,
+				2F9A52192D9D102A005B2FDE /* SwiftUI.framework */,
+				2F07AE562DB881E500501BA5 /* Intents.framework */,
+				2F07AE612DB881E600501BA5 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2F07AE542DB881E500501BA5 /* AwesomeWidgetIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F07AE742DB881E600501BA5 /* Build configuration list for PBXNativeTarget "AwesomeWidgetIntents" */;
+			buildPhases = (
+				2F07AE512DB881E500501BA5 /* Sources */,
+				2F07AE522DB881E500501BA5 /* Frameworks */,
+				2F07AE532DB881E500501BA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2F07AE582DB881E500501BA5 /* AwesomeWidgetIntents */,
+			);
+			name = AwesomeWidgetIntents;
+			packageProductDependencies = (
+			);
+			productName = AwesomeWidgetIntents;
+			productReference = 2F07AE552DB881E500501BA5 /* AwesomeWidgetIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F9A520E2D9D0FFD005B2FDE /* Build configuration list for PBXNativeTarget "MakeAwesomeWidget" */;
@@ -55,13 +291,18 @@
 				2F9A51FC2D9D0FFC005B2FDE /* Sources */,
 				2F9A51FD2D9D0FFC005B2FDE /* Frameworks */,
 				2F9A51FE2D9D0FFC005B2FDE /* Resources */,
+				2F9A522E2D9D102C005B2FDE /* Embed Foundation Extensions */,
+				2F75BAF22DA8FDF800F60526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2F9A52282D9D102C005B2FDE /* PBXTargetDependency */,
+				2F07AE6E2DB881E600501BA5 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				2F9A52022D9D0FFC005B2FDE /* MakeAwesomeWidget */,
+				2F07AE192DB78AB100501BA5 /* AwesomeWidgetExtension */,
+				2F07AF0D2DB8DC7A00501BA5 /* MakeAwesomeWidget */,
 			);
 			name = MakeAwesomeWidget;
 			packageProductDependencies = (
@@ -69,6 +310,26 @@
 			productName = MakeAwesomeWidget;
 			productReference = 2F9A52002D9D0FFC005B2FDE /* MakeAwesomeWidget.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9A522B2D9D102C005B2FDE /* Build configuration list for PBXNativeTarget "AwesomeWidgetExtensionExtension" */;
+			buildPhases = (
+				2F9A52112D9D102A005B2FDE /* Sources */,
+				2F9A52122D9D102A005B2FDE /* Frameworks */,
+				2F9A52132D9D102A005B2FDE /* Resources */,
+				2F75BAEF2DA8FDF300F60526 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AwesomeWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = AwesomeWidgetExtensionExtension;
+			productReference = 2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -80,7 +341,13 @@
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
+					2F07AE542DB881E500501BA5 = {
+						CreatedOnToolsVersion = 16.2;
+					};
 					2F9A51FF2D9D0FFC005B2FDE = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					2F9A52142D9D102A005B2FDE = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -91,6 +358,46 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				bg,
+				cs,
+				da,
+				de,
+				el,
+				es,
+				et,
+				fa,
+				fi,
+				fr,
+				he,
+				hr,
+				hu,
+				id,
+				it,
+				ja,
+				kk,
+				ko,
+				lt,
+				lv,
+				nl,
+				no,
+				pl,
+				"pt-BR",
+				"pt-PT",
+				ro,
+				ru,
+				sk,
+				sl,
+				sr,
+				sv,
+				th,
+				tr,
+				uk,
+				uz,
+				vi,
+				"zh-Hans",
+				"zh-Hant",
+				nb,
 			);
 			mainGroup = 2F9A51F72D9D0FFC005B2FDE;
 			minimizedProjectReferenceProxies = 1;
@@ -100,11 +407,20 @@
 			projectRoot = "";
 			targets = (
 				2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */,
+				2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */,
+				2F07AE542DB881E500501BA5 /* AwesomeWidgetIntents */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2F07AE532DB881E500501BA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9A51FE2D9D0FFC005B2FDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,10 +428,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F9A52132D9D102A005B2FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F75BAF42DA92E1900F60526 /* loading.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2F07AE512DB881E500501BA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9A51FC2D9D0FFC005B2FDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F9A52112D9D102A005B2FDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,7 +462,74 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2F07AE6E2DB881E600501BA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F07AE542DB881E500501BA5 /* AwesomeWidgetIntents */;
+			targetProxy = 2F07AE6D2DB881E600501BA5 /* PBXContainerItemProxy */;
+		};
+		2F9A52282D9D102C005B2FDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */;
+			targetProxy = 2F9A52272D9D102C005B2FDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2F07AE752DB881E600501BA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AwesomeWidgetIntents/AwesomeWidgetIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZRQJ89KCDK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidgetIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidgetIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfs777.demo.MakeAwesomeWidget.AwesomeWidgetIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F07AE762DB881E600501BA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AwesomeWidgetIntents/AwesomeWidgetIntents.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZRQJ89KCDK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidgetIntents/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidgetIntents;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfs777.demo.MakeAwesomeWidget.AwesomeWidgetIntents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		2F9A520C2D9D0FFD005B2FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,17 +654,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeAwesomeWidget/MakeAwesomeWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeAwesomeWidget/Preview Content\"";
 				DEVELOPMENT_TEAM = ZRQJ89KCDK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MakeAwesomeWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -278,17 +686,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeAwesomeWidget/MakeAwesomeWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeAwesomeWidget/Preview Content\"";
 				DEVELOPMENT_TEAM = ZRQJ89KCDK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MakeAwesomeWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +713,76 @@
 			};
 			name = Release;
 		};
+		2F9A522C2D9D102C005B2FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AwesomeWidgetExtension/AwesomeWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZRQJ89KCDK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfs777.demo.MakeAwesomeWidget.AwesomeWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2F9A522D2D9D102C005B2FDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AwesomeWidgetExtension/AwesomeWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZRQJ89KCDK;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AwesomeWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AwesomeWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wfs777.demo.MakeAwesomeWidget.AwesomeWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2F07AE742DB881E600501BA5 /* Build configuration list for PBXNativeTarget "AwesomeWidgetIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F07AE752DB881E600501BA5 /* Debug */,
+				2F07AE762DB881E600501BA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2F9A51FB2D9D0FFC005B2FDE /* Build configuration list for PBXProject "MakeAwesomeWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -319,6 +797,15 @@
 			buildConfigurations = (
 				2F9A520F2D9D0FFD005B2FDE /* Debug */,
 				2F9A52102D9D0FFD005B2FDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F9A522B2D9D102C005B2FDE /* Build configuration list for PBXNativeTarget "AwesomeWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2F9A522C2D9D102C005B2FDE /* Debug */,
+				2F9A522D2D9D102C005B2FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

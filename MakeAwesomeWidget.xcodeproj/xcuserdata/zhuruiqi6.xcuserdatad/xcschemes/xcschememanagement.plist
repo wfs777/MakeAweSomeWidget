@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AwesomeWidgetExtensionExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>AwesomeWidgetIntents.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>MakeAwesomeWidget.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F07AE542DB881E500501BA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F9A51FF2D9D0FFC005B2FDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F9A52142D9D102A005B2FDE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
