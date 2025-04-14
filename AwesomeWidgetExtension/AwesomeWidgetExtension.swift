@@ -38,7 +38,10 @@ struct Provider: AppIntentTimelineProvider {
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         let entry = StatusEntry(date: currentDate, status: status, lastUpdated: lastUpdated, configuration: configuration)
+        let nextEntryDate = Calendar.current.date(byAdding: .second, value: 2, to: currentDate)!
+        let nextEntry = StatusEntry(date: nextEntryDate, status: "✅ 任务完成", lastUpdated: lastUpdated, configuration: configuration)
         entries.append(entry)
+        entries.append(nextEntry)
         let nextUpdate = Date().addingTimeInterval(60 * 1)
         return Timeline(entries: entries, policy: .after(nextUpdate))
     }
@@ -107,13 +110,19 @@ struct AwesomeWidgetExtensionEntryView: View {
                 Text("🕒 \(formattedDate(entry.lastUpdated))")
                     .font(.footnote)
                     .foregroundColor(.gray)
-                Button(intent: RefreshStatusIntent()) {
-                    Text("🔄 刷新")
-                        .font(.caption)
-                        .padding(6)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(6)
+                if (entry.status.contains("进行")) {
+                    Button(intent: RefreshStatusIntent()) {
+                        GifImageView(gifName: "loading", defaultImage: "").frame(width: 50,height: 50)
+                    }
+                } else {
+                    Button(intent: RefreshStatusIntent()) {
+                        Text("🔄 刷新")
+                            .font(.caption)
+                            .padding(6)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(6)
+                    }
                 }
             }
         }

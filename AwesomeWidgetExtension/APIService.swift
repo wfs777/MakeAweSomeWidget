@@ -12,10 +12,10 @@ struct APIService {
 
     func fetchStatus() async -> String {
         // 模拟网络延迟 1.5 秒
-        try? await Task.sleep(nanoseconds: 1500000000)
+        try? await Task.sleep(nanoseconds: 500000000)
 
         // 返回一个假数据
-        let fakeStatuses = ["✅ 任务完成", "❌ 任务失败", "⚡️ 进行中"]
+        let fakeStatuses = ["⚡️ 进行中"]
         return fakeStatuses.randomElement()!
     }
 }

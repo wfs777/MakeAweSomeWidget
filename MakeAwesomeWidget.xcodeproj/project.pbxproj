@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F75BAED2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
+		2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F75BAF02DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
+		2F75BAF12DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F75BAF42DA92E1900F60526 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F75BAF32DA92E1900F60526 /* loading.gif */; };
 		2F9A52182D9D102A005B2FDE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9A52172D9D102A005B2FDE /* WidgetKit.framework */; };
 		2F9A521A2D9D102A005B2FDE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9A52192D9D102A005B2FDE /* SwiftUI.framework */; };
 		2F9A52292D9D102C005B2FDE /* AwesomeWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -23,6 +28,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2F75BAEF2DA8FDF300F60526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2F75BAF22DA8FDF800F60526 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2F75BAF12DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2F9A522E2D9D102C005B2FDE /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +64,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ClockHandRotationKit.xcframework; sourceTree = "<group>"; };
+		2F75BAF32DA92E1900F60526 /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		2F9A52002D9D0FFC005B2FDE /* MakeAwesomeWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeAwesomeWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9A52152D9D102A005B2FDE /* AwesomeWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AwesomeWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9A52172D9D102A005B2FDE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
@@ -56,6 +85,10 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				APIService.swift,
+				"Extensions/Date+.swift",
+				Extensions/GIFImageView.swift,
+				"Extensions/UIImage+.swift",
+				"Extensions/View+.swift",
 			);
 			target = 2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */;
 		};
@@ -83,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F75BAF02DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F9A521A2D9D102A005B2FDE /* SwiftUI.framework in Frameworks */,
+				2F75BAED2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Frameworks */,
 				2F9A52182D9D102A005B2FDE /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,9 +133,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F75BAD52DA8F65800F60526 /* ThridLib */ = {
+			isa = PBXGroup;
+			children = (
+				2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */,
+			);
+			path = ThridLib;
+			sourceTree = "<group>";
+		};
 		2F9A51F72D9D0FFC005B2FDE = {
 			isa = PBXGroup;
 			children = (
+				2F75BAF32DA92E1900F60526 /* loading.gif */,
+				2F75BAD52DA8F65800F60526 /* ThridLib */,
 				2F9A52022D9D0FFC005B2FDE /* MakeAwesomeWidget */,
 				2F9A521B2D9D102A005B2FDE /* AwesomeWidgetExtension */,
 				2F9A52372D9D1EA0005B2FDE /* AwesomeWidgetExtensionExtension.entitlements */,
@@ -138,6 +183,7 @@
 				2F9A51FD2D9D0FFC005B2FDE /* Frameworks */,
 				2F9A51FE2D9D0FFC005B2FDE /* Resources */,
 				2F9A522E2D9D102C005B2FDE /* Embed Foundation Extensions */,
+				2F75BAF22DA8FDF800F60526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +207,7 @@
 				2F9A52112D9D102A005B2FDE /* Sources */,
 				2F9A52122D9D102A005B2FDE /* Frameworks */,
 				2F9A52132D9D102A005B2FDE /* Resources */,
+				2F75BAEF2DA8FDF300F60526 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F75BAF42DA92E1900F60526 /* loading.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

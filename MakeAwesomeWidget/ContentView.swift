@@ -14,11 +14,16 @@ struct ContentView: View {
             Text("当前状态: \(dataManager.status)")
                 .font(.title)
                 .padding()
-
+            
             Button("获取新状态") {
                 dataManager.fetchNewStatus()
             }
             .padding()
+            
+            Toggle("自动刷新", isOn: .constant(false)).padding()
+                
+            ProgressView("加载中...").progressViewStyle(CircularProgressViewStyle(tint: .blue)).padding()
+            
         }
     }
 }
