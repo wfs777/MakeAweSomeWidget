@@ -12,5 +12,8 @@ import SwiftUI
 struct AwesomeWidgetExtensionBundle: WidgetBundle {
     var body: some Widget {
         AwesomeWidgetExtension()
+        RequestStatusWidget()
+        MultiConfigWidget()
+        MyCarControlWidget()
     }
 }

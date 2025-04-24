@@ -111,9 +111,7 @@ struct AwesomeWidgetExtensionEntryView: View {
                     .font(.footnote)
                     .foregroundColor(.gray)
                 if (entry.status.contains("进行")) {
-                    Button(intent: RefreshStatusIntent()) {
-                        GifImageView(gifName: "loading", defaultImage: "").frame(width: 50,height: 50)
-                    }
+                    GifImageView(gifName: "loading", defaultImage: "").frame(width: 40,height: 40)
                 } else {
                     Button(intent: RefreshStatusIntent()) {
                         Text("🔄 刷新")

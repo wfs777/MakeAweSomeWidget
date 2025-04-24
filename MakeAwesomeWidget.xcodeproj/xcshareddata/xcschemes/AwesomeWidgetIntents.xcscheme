@@ -16,9 +16,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2F9A52142D9D102A005B2FDE"
-               BuildableName = "AwesomeWidgetExtensionExtension.appex"
-               BlueprintName = "AwesomeWidgetExtensionExtension"
+               BlueprintIdentifier = "2F07AE542DB881E500501BA5"
+               BuildableName = "AwesomeWidgetIntents.appex"
+               BlueprintName = "AwesomeWidgetIntents"
                ReferencedContainer = "container:MakeAwesomeWidget.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -57,18 +57,8 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.springboard">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2F9A52142D9D102A005B2FDE"
-            BuildableName = "AwesomeWidgetExtensionExtension.appex"
-            BlueprintName = "AwesomeWidgetExtensionExtension"
-            ReferencedContainer = "container:MakeAwesomeWidget.xcodeproj">
-         </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2F9A51FF2D9D0FFC005B2FDE"
@@ -76,24 +66,7 @@
             BlueprintName = "MakeAwesomeWidget"
             ReferencedContainer = "container:MakeAwesomeWidget.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "_XCWidgetKind"
-            value = "MyCarControlWidget"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "_XCWidgetDefaultView"
-            value = "timeline"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-         <EnvironmentVariable
-            key = "_XCWidgetFamily"
-            value = "systemMedium"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
