@@ -8,6 +8,7 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     @Parameter(
         title: "功能项",
         description: "选择并排序要显示的功能",
+        requestValueDialog: .init("选择并排序要显示的功能"),
         optionsProvider: SortableItemOptionsProvider()
     )
     var items: [SortableItem]?
@@ -15,8 +16,10 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     
     @Parameter(
         title: "选择城市",
-        description: "从省份中选择一个城市",
-        optionsProvider: GroupedCityOptionsProvider()
+        description: "从省份中选择一个城市"
+//        requestValueDialog: .init("选择城市"),
+//        inputConnectionBehavior: .connectToPreviousIntentResult,
+//        optionsProvider: GroupedCityOptionsProvider()
     )
     var city: CityOption?
     
@@ -40,7 +43,7 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     
     init() {
         self.items = SortableItem.defaultItems
-        self.city = CityOption.defaultCities.first
+        self.city = CityOption.defaultCities.first!
         self.background = .system
         self.showTitle = true
         self.refreshInterval = 60
