@@ -77,18 +77,22 @@ struct CityOption: AppEntity, Hashable {
     
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(
-            title: LocalizedStringResource(stringLiteral: name)
+            title: LocalizedStringResource(stringLiteral: "\(province) - \(name)")
         )
     }
 }
 
-struct CityOptionQuery: EntityQuery {
+struct CityOptionQuery: EntityStringQuery {
+    func entities(matching string: String) async throws -> [CityOption] {
+        CityOption.allCities.filter { string.contains($0.id) }
+    }
+    
     func entities(for identifiers: [String]) async throws -> [CityOption] {
         CityOption.allCities.filter { identifiers.contains($0.id) }
     }
 
     func suggestedEntities() async throws -> [CityOption] {
-        CityOption.defaultCities
+        CityOption.allCities
     }
     
 }
@@ -108,6 +112,8 @@ extension CityOption {
     ]
     
     static var defaultCities: [CityOption] {
-        [.init(id: "hz", name: "杭州", province: "浙江")]
+        [.init(id: "hz", name: "杭州", province: "浙江"),
+         .init(id: "nb", name: "宁波", province: "浙江"),
+         .init(id: "wz", name: "温州", province: "浙江")]
     }
 }
