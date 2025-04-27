@@ -1,6 +1,59 @@
 import AppIntents
 import SwiftUICore
 import Foundation
+
+
+// 这个类是系统生成的
+@available(iOS 16.0, macOS 13.0, watchOS 9.0, tvOS 16.0, *)
+struct CarControlAppEntity: AppEntity {
+    static var typeDisplayRepresentation = TypeDisplayRepresentation(name: "Car Control")
+
+    @Property(title: "Name")
+    var name: String?
+
+    struct CarControlAppEntityQuery: EntityStringQuery {
+        func entities(for identifiers: [CarControlAppEntity.ID]) async throws -> [CarControlAppEntity] {
+            return allCarControls
+        }
+
+        func entities(matching string: String) async throws -> [CarControlAppEntity] {
+            var carControlTypes = CarControlType.allCases
+            carControlTypes = carControlTypes.filter { $0.name.contains(string) }
+            let carControls = carControlTypes.map { CarControlAppEntity(id: $0.rawValue, displayString: $0.name) }
+            return carControls
+        }
+
+        func suggestedEntities() async throws -> [CarControlAppEntity] {
+            let carControlTypes = CarControlType.allCases
+            let carControls = carControlTypes.map { CarControlAppEntity(id: $0.rawValue, displayString: $0.name) }
+            return carControls
+        }
+    }
+    static var defaultQuery = CarControlAppEntityQuery()
+
+    let id: String // if your identifier is not a String, conform the entity to EntityIdentifierConvertible.
+    var displayString: String
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(title: "\(displayString)")
+    }
+
+    init(id: String, displayString: String) {
+        self.id = id
+        self.displayString = displayString
+    }
+}
+
+extension CarControlAppEntity {
+    static var allCarControls: [CarControlAppEntity] {
+        CarControlType.allCases.map { CarControlAppEntity(id: $0.rawValue, displayString: $0.name) }
+    }
+    
+    static var defaultCarControls: [CarControlAppEntity] {
+        Array(allCarControls.prefix(4))
+    }
+}
+
+
 // 可排序的操作项
 struct SortableItem: AppEntity, Hashable {
     let id: String
@@ -66,6 +119,40 @@ enum WidgetBackground: String, AppEnum {
     }
 }
 
+struct ProvinceOption: AppEntity, Hashable {
+    let id: String
+    let name: String
+    
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "省份"
+    static var defaultQuery = ProvinceOptionQuery()
+    
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(
+            title: LocalizedStringResource(stringLiteral: name)
+        )
+    }
+}
+
+struct ProvinceOptionQuery: EntityStringQuery {
+    func entities(matching string: String) async throws -> [ProvinceOption] {
+        ProvinceOption.allProvinces.filter { string.contains($0.id) }
+    }
+    
+    func entities(for identifiers: [String]) async throws -> [ProvinceOption] {
+        ProvinceOption.allProvinces.filter { identifiers.contains($0.id) }
+    }
+
+    func suggestedEntities() async throws -> [ProvinceOption] {
+        ProvinceOption.allProvinces
+    }
+}
+
+extension ProvinceOption {
+    static var allProvinces: [ProvinceOption] = [
+        .init(id: "zhejiang", name: "浙江"),
+        .init(id: "jiangsu", name: "江苏"),
+    ]
+}
 
 struct CityOption: AppEntity, Hashable {
     let id: String
@@ -77,12 +164,18 @@ struct CityOption: AppEntity, Hashable {
     
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(
-            title: LocalizedStringResource(stringLiteral: "\(province) - \(name)")
+            title: LocalizedStringResource(stringLiteral: "\(name)")
         )
     }
 }
 
 struct CityOptionQuery: EntityStringQuery {
+    
+    @IntentParameterDependency<SortableWidgetConfigIntent>(
+        \.$province
+    )
+    var configIntent
+    
     func entities(matching string: String) async throws -> [CityOption] {
         CityOption.allCities.filter { string.contains($0.id) }
     }
@@ -92,7 +185,8 @@ struct CityOptionQuery: EntityStringQuery {
     }
 
     func suggestedEntities() async throws -> [CityOption] {
-        CityOption.allCities
+        guard let configIntent else { return [] }
+        return CityOption.allCities.filter { $0.province == configIntent.province.name }
     }
     
 }

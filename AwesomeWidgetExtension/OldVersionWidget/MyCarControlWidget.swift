@@ -31,7 +31,7 @@ struct carControlProvider: IntentTimelineProvider {
 
     func getTimeline(for configuration: WidgetConfigIntent, in context: Context, completion: @escaping (Timeline<CarControlEntry>) -> ()) {
         let entry = CarControlEntry(date: Date(), configuration: configuration, carControls: configuration.carControls)
-        print("🚀 Widget Timeline 正在请求 timeline(for intent:)：\(configuration)")
+//        print("🚀 Widget Timeline 正在请求 timeline(for intent:)：\(configuration)")
         completion(Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(20 * 60))))
     }
 }

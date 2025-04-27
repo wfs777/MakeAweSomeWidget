@@ -12,6 +12,8 @@ struct WidgetProvider: AppIntentTimelineProvider {
     
     func timeline(for configuration: SortableWidgetConfigIntent, in context: Context) async -> Timeline<WidgetEntry> {
         let entry = WidgetEntry(date: Date(), config: configuration)
+        print(entry.config.carControls?.count)
+        print(entry.config.items?.count)
         let refreshDate = Calendar.current.date(byAdding: .minute, value: configuration.refreshInterval, to: Date())!
         return Timeline(entries: [entry], policy: .after(refreshDate))
     }
@@ -29,26 +31,37 @@ struct WidgetView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             if entry.config.showTitle {
-                Text("我的工具")
-                    .font(.headline)
-                    .foregroundColor(entry.config.background == .dark ? .white : .primary)
+                HStack{
+                    Text("小组件配置测试")
+                        .font(.headline)
+                        .foregroundColor(entry.config.background == .dark ? .white : .primary)
+                    Text("\(entry.config.province?.name ?? "") - \(entry.config.city?.name ?? "")")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
             }
             Spacer()
             HStack{
                 ForEach(entry.config.items!.prefix(itemCountForFamily)) { item in
-                    HStack(spacing: 10) {
+                    HStack(spacing: 6) {
                         if let icon = item.icon {
                             Image(systemName: icon)
                                 .foregroundColor(.accentColor)
                         }
                         Text(item.title)
-                            .font(.subheadline)
+                            .font(.system(size: 10))
                         Spacer()
                     }
                     .padding(.vertical, 4)
                 }
             }
-           
+            Spacer()
+            HStack {
+                ForEach(entry.config.carControls ?? []) { carcontrol in
+                    Text(carcontrol.displayString).font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
         .padding()
         .containerBackground(entry.config.background.color, for: .widget)

@@ -4,6 +4,11 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "多功能小组件"
     static var description = IntentDescription("可配置的多功能小组件")
     
+    @Parameter(title: "车控功能",
+               size: [.systemSmall: 1, .systemMedium: 4, .systemLarge: 8, .systemExtraLarge: 12, .accessoryInline: 1, .accessoryCorner: 1, .accessoryCircular: 1, .accessoryRectangular: 2]
+    )
+    var carControls: [CarControlAppEntity]?
+    
     // 可排序的操作项
     @Parameter(
         title: "功能项",
@@ -12,14 +17,17 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
         optionsProvider: SortableItemOptionsProvider()
     )
     var items: [SortableItem]?
-    
+
+    @Parameter(
+        title: "选择省份",
+        description: "选择省份"
+    )
+    var province: ProvinceOption?
+
     
     @Parameter(
         title: "选择城市",
         description: "从省份中选择一个城市"
-//        requestValueDialog: .init("选择城市"),
-//        inputConnectionBehavior: .connectToPreviousIntentResult,
-//        optionsProvider: GroupedCityOptionsProvider()
     )
     var city: CityOption?
     
@@ -42,6 +50,7 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     var refreshInterval: Int
     
     init() {
+        self.carControls = CarControlAppEntity.defaultCarControls
         self.items = SortableItem.defaultItems
         self.city = CityOption.defaultCities.first!
         self.background = .system
@@ -51,7 +60,9 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     
     static var parameterSummary: some ParameterSummary {
         Summary {
+            \.$carControls
             \.$items
+            \.$province
             \.$city
             \.$background
             \.$showTitle
@@ -70,18 +81,15 @@ struct SortableItemOptionsProvider: DynamicOptionsProvider {
         SortableItem.defaultItems
     }
 }
-
-
-struct GroupedCityOptionsProvider: DynamicOptionsProvider {
-    func results() async throws -> [CityOption] {
-        CityOption.allCities
-    }
-    
-    func defaultResult() async throws -> CityOption? {
-        CityOption.defaultCities.first
-    }
-
-    func grouping(for option: CityOption) -> String? {
-        option.province
-    }
-}
+//
+//
+//struct GroupedCityOptionsProvider: DynamicOptionsProvider {
+//    func results() async throws -> [CityOption] {
+//        CityOption.allCities
+//    }
+//    
+//    func defaultResult() async throws -> CityOption? {
+//        CityOption.defaultCities.first
+//    }
+//
+//}
