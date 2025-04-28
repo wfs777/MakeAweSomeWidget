@@ -39,6 +39,11 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     @Parameter(title: "显示标题", default: true)
     var showTitle: Bool
     
+    
+    // 标题
+    @Parameter(title: "标题", default: "小组件标题")
+    var title: String
+    
     // 刷新间隔
     @Parameter(
         title: "刷新间隔(分钟)",
@@ -59,14 +64,27 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     }
     
     static var parameterSummary: some ParameterSummary {
-        Summary {
-            \.$carControls
-            \.$items
-            \.$province
-            \.$city
-            \.$background
-            \.$showTitle
-            \.$refreshInterval
+        When(\.$showTitle, .equalTo, true) {
+            Summary {
+                \.$carControls
+                \.$items
+                \.$province
+                \.$city
+                \.$background
+                \.$showTitle
+                \.$title
+                \.$refreshInterval
+            }
+        } otherwise: {
+            Summary {
+                \.$carControls
+                \.$items
+                \.$province
+                \.$city
+                \.$background
+                \.$showTitle
+                \.$refreshInterval
+            }
         }
     }
 }

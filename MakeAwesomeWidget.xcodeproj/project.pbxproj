@@ -101,7 +101,7 @@
 				"Extensions/View+.swift",
 				OldVersionWidget/MyCarControlWidget.swift,
 				OldVersionWidget/WidgetConfigIntent.intentdefinition,
-				RequestStatusWidget/RequestStatusWidget.swift,
+				RequestStatusWidget/TestTheTimelineWidget.swift,
 				RequestStatusWidget/TriggerRequestIntent.swift,
 				SortableWidget/SortableItem.swift,
 				SortableWidget/SortableWidget.swift,

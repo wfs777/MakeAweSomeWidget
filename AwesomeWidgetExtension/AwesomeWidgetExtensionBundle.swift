@@ -12,7 +12,7 @@ import SwiftUI
 struct AwesomeWidgetExtensionBundle: WidgetBundle {
     var body: some Widget {
         AwesomeWidgetExtension()
-        RequestStatusWidget()
+        TestTheTimelineWidget()
         MultiConfigWidget()
         MyCarControlWidget()
     }

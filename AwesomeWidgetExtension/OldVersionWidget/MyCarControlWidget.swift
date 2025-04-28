@@ -56,7 +56,10 @@ struct MyCarControlWidgetEntryView: View {
 struct MyCarControlWidget: Widget {
     let kind: String = "MyCarControlWidget"
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: WidgetConfigIntent.self, provider: carControlProvider()) { entry in
+        IntentConfiguration(
+            kind: kind,
+            intent: WidgetConfigIntent.self,
+            provider: carControlProvider()) { entry in
             if #available(iOS 17.0, *) {
                 MyCarControlWidgetEntryView(entry: entry)
                     .containerBackground(.fill.tertiary, for: .widget)
