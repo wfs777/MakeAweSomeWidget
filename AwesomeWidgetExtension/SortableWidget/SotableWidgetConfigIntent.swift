@@ -57,7 +57,7 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     init() {
         self.carControls = CarControlAppEntity.defaultCarControls
         self.items = SortableItem.defaultItems
-        self.city = CityOption.defaultCities.first!
+        self.city = CityOption.allCities.filter { $0.province == self.province?.name }.first
         self.background = .system
         self.showTitle = true
         self.refreshInterval = 60
