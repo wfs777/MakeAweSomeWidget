@@ -182,7 +182,7 @@
 			<key>INTypeDisplayNameID</key>
 			<string>Mtfnsb</string>
 			<key>INTypeLastPropertyTag</key>
-			<integer>100</integer>
+			<integer>102</integer>
 			<key>INTypeName</key>
 			<string>CarControl</string>
 			<key>INTypeProperties</key>
@@ -247,7 +247,7 @@
 					<key>INTypePropertyName</key>
 					<string>name</string>
 					<key>INTypePropertyTag</key>
-					<integer>100</integer>
+					<integer>102</integer>
 					<key>INTypePropertyType</key>
 					<string>String</string>
 				</dict>

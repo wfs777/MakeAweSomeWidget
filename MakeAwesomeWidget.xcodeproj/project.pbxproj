@@ -11,7 +11,7 @@
 		2F07AE6F2DB881E600501BA5 /* AwesomeWidgetIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2F07AE552DB881E500501BA5 /* AwesomeWidgetIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2F59223F2DB9C29A0061416B /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F07AE562DB881E500501BA5 /* Intents.framework */; };
 		2F75BAED2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
-		2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2F75BAEE2DA8FDF300F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2F75BAF02DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; };
 		2F75BAF12DA8FDF800F60526 /* ClockHandRotationKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F75BAD62DA8F66900F60526 /* ClockHandRotationKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2F75BAF42DA92E1900F60526 /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2F75BAF32DA92E1900F60526 /* loading.gif */; };

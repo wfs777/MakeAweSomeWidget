@@ -36,10 +36,6 @@ struct ConfigurationAppIntent: WidgetConfigurationIntent {
 struct RefreshStatusIntent: AppIntent {
     static var title: LocalizedStringResource = "刷新状态"
     
-    // ✅ 这里的参数必须用 @Parameter
-    @Parameter(title: "新状态")
-    var status: String
-
     func perform() async throws -> some IntentResult {
         // 执行刷新操作
         return .result()

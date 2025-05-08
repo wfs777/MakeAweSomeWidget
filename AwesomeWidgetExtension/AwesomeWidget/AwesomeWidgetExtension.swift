@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct Provider: AppIntentTimelineProvider {
+struct RefreshProvider: AppIntentTimelineProvider {
     private let sharedDefaults = UserDefaults(suiteName: "group.com.awesomeapp.shared")
 
     func placeholder(in context: Context) -> StatusEntry {
@@ -32,14 +32,14 @@ struct Provider: AppIntentTimelineProvider {
 
     func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<StatusEntry> {
 //        let status = getStatusFromStorage()
-        let (status, lastUpdated) = await fetchStatusAndUpdateStorage()
+//        let (status, lastUpdated) = await fetchStatusAndUpdateStorage()
         var entries: [StatusEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
-        let entry = StatusEntry(date: currentDate, status: status, lastUpdated: lastUpdated, configuration: configuration)
+        let entry = StatusEntry(date: currentDate, status: "进行中", lastUpdated: currentDate, configuration: configuration)
         let nextEntryDate = Calendar.current.date(byAdding: .second, value: 2, to: currentDate)!
-        let nextEntry = StatusEntry(date: nextEntryDate, status: "✅ 任务完成", lastUpdated: lastUpdated, configuration: configuration)
+        let nextEntry = StatusEntry(date: nextEntryDate, status: "✅ 任务完成", lastUpdated: currentDate, configuration: configuration)
         entries.append(entry)
         entries.append(nextEntry)
         let nextUpdate = Date().addingTimeInterval(60 * 1)
@@ -76,7 +76,7 @@ struct StatusEntry: TimelineEntry {
 
 struct AwesomeWidgetExtensionEntryView: View {
     @Environment(\.widgetFamily) var widgetFamily
-    var entry: Provider.Entry
+    var entry: RefreshProvider.Entry
 
     var body: some View {
         switch widgetFamily {
@@ -169,7 +169,7 @@ struct AwesomeWidgetExtension: Widget {
         AppIntentConfiguration(
             kind: kind,
             intent: ConfigurationAppIntent.self,
-            provider: Provider()
+            provider: RefreshProvider()
         ) { entry in
             AwesomeWidgetExtensionEntryView(entry: entry)
         }

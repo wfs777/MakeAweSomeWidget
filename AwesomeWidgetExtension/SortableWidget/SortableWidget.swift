@@ -12,8 +12,10 @@ struct WidgetProvider: AppIntentTimelineProvider {
     
     func timeline(for configuration: SortableWidgetConfigIntent, in context: Context) async -> Timeline<WidgetEntry> {
         let entry = WidgetEntry(date: Date(), config: configuration)
-        print(entry.config.carControls?.count)
-        print(entry.config.items?.count)
+//        print(entry.config.carControls?.count)
+//        print(entry.config.items?.count)
+        print(entry.config.province?.name)
+        print(entry.config.city?.name)
         let refreshDate = Calendar.current.date(byAdding: .minute, value: configuration.refreshInterval, to: Date())!
         return Timeline(entries: [entry], policy: .after(refreshDate))
     }
