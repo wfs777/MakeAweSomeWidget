@@ -5,7 +5,8 @@
 文档需要在实践的基础上理解 建议先创建一个Demo尝试后理解
 [项目地址 MakeAweSomeWidget](https://github.com/wfs777/MakeAweSomeWidget)
 
-目前仅包含桌面小组件，关于灵动岛及liveActivity的开发后续再进行补充。
+目前仅包含桌面小组件，关于灵动岛及LiveActivity的开发后续再进行补充。
+灵动岛和LiveActivity可先参考[SwiftUIWidgetDemo](https://github.com/0Itsuki0/SwiftUIWidgetDemo)
 
 ## 整体概述
 
