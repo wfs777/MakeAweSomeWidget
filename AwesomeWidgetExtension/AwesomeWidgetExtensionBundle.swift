@@ -15,5 +15,6 @@ struct AwesomeWidgetExtensionBundle: WidgetBundle {
         TestTheTimelineWidget()
         MultiConfigWidget()
         MyCarControlWidget()
+        FlashWidget()
     }
 }

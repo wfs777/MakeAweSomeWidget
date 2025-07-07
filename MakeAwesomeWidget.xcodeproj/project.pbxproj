@@ -99,13 +99,12 @@
 				Extensions/GIFImageView.swift,
 				"Extensions/UIImage+.swift",
 				"Extensions/View+.swift",
+				FlashWidget/FlashingWidget.swift,
+				MultiConfigWidget/SortableItem.swift,
 				OldVersionWidget/MyCarControlWidget.swift,
 				OldVersionWidget/WidgetConfigIntent.intentdefinition,
 				RequestStatusWidget/TestTheTimelineWidget.swift,
 				RequestStatusWidget/TriggerRequestIntent.swift,
-				SortableWidget/SortableItem.swift,
-				SortableWidget/SortableWidget.swift,
-				SortableWidget/SotableWidgetConfigIntent.swift,
 			);
 			target = 2F9A52142D9D102A005B2FDE /* AwesomeWidgetExtensionExtension */;
 		};
@@ -120,6 +119,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				AwesomeWidgetExtensionBundle.swift,
+				FlashWidget/FlashingWidget.swift,
 				Info.plist,
 				OldVersionWidget/MyCarControlWidget.swift,
 			);
@@ -228,9 +228,9 @@
 		2F9A51F72D9D0FFC005B2FDE = {
 			isa = PBXGroup;
 			children = (
+				2F07AE192DB78AB100501BA5 /* AwesomeWidgetExtension */,
 				2F75BAD52DA8F65800F60526 /* ThridLib */,
 				2F07AF0D2DB8DC7A00501BA5 /* MakeAwesomeWidget */,
-				2F07AE192DB78AB100501BA5 /* AwesomeWidgetExtension */,
 				2F75BAF32DA92E1900F60526 /* loading.gif */,
 				2F07AE582DB881E500501BA5 /* AwesomeWidgetIntents */,
 				2F9A52162D9D102A005B2FDE /* Frameworks */,
