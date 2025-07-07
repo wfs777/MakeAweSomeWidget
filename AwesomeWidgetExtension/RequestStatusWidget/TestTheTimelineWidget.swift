@@ -94,6 +94,6 @@ struct TestTheTimelineWidget: Widget {
         }
         .configurationDisplayName("请求状态小组件")
         .description("点击按钮发起请求并更新状态")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemMedium])
     }
 }

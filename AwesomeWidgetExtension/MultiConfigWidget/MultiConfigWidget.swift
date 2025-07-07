@@ -92,6 +92,6 @@ struct MultiConfigWidget: Widget {
         }
         .configurationDisplayName("多功能组件")
         .description("支持多项配置和排序的小组件")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemMedium])
     }
 }

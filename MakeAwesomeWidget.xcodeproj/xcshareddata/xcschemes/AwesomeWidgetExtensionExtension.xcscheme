@@ -80,7 +80,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
-            value = "AwesomeWidgetExtension"
+            value = "MultiConfigWidget"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

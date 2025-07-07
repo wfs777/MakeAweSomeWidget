@@ -418,7 +418,7 @@ func timeline(for configuration: Self.Intent, in context: Self.Context) async ->
 ## 相关关键开发问题
 
 ### 关于调试
-![[WidgetDebug.jpg]]
+![WidgetDebug](img/WidgetDebug.jpg)
 
 - Kind 作为唯一标识可以指定调试的小组件
 - Family指定调试的Widget的大小

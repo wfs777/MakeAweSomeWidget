@@ -100,6 +100,8 @@
 				"Extensions/UIImage+.swift",
 				"Extensions/View+.swift",
 				FlashWidget/FlashingWidget.swift,
+				MultiConfigWidget/MultiConfigWidget.swift,
+				MultiConfigWidget/MultiConfigWidgetConfigIntent.swift,
 				MultiConfigWidget/SortableItem.swift,
 				OldVersionWidget/MyCarControlWidget.swift,
 				OldVersionWidget/WidgetConfigIntent.intentdefinition,
@@ -121,6 +123,9 @@
 				AwesomeWidgetExtensionBundle.swift,
 				FlashWidget/FlashingWidget.swift,
 				Info.plist,
+				MultiConfigWidget/MultiConfigWidget.swift,
+				MultiConfigWidget/MultiConfigWidgetConfigIntent.swift,
+				MultiConfigWidget/SortableItem.swift,
 				OldVersionWidget/MyCarControlWidget.swift,
 			);
 			target = 2F9A51FF2D9D0FFC005B2FDE /* MakeAwesomeWidget */;
