@@ -53,6 +53,67 @@ extension CarControlAppEntity {
     }
 }
 
+struct AuthorNameItem: AppEntity, Hashable {
+    
+    let id: String
+    var name: String
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = "操作项"
+    static var defaultQuery = AuthorNameQuery()
+    var displayRepresentation: DisplayRepresentation {
+        DisplayRepresentation(
+            title: LocalizedStringResource(stringLiteral: name)
+        )
+    }
+}
+
+struct AuthorNameQuery: EntityStringQuery {
+    func entities(for identifiers: [String]) async throws -> [AuthorNameItem] {
+        return []
+    }
+    
+    func entities(matching string: String) async throws -> IntentItemCollection<AuthorNameItem> {
+        let sections: [IntentItemSection<AuthorNameItem>] = [IntentItemSection<AuthorNameItem>(
+            "Italian Authors",
+            items: [IntentItem(AuthorNameItem(id: "0", name: "Alessandro Manzoni")),
+                    IntentItem(AuthorNameItem(id: "1", name: "Blessandro Manzoni")),]
+        ),
+                                                             IntentItemSection<AuthorNameItem>(
+            "Section 2",
+            items: [IntentItem(AuthorNameItem(id: "2", name: "Anton Chekhov")),
+                    IntentItem(AuthorNameItem(id: "3", name: "Fyodor Dostoevsky")),]
+        )]
+        return IntentItemCollection(sections: sections)
+    }
+    
+    
+    func suggestedEntities() async throws -> IntentItemCollection<AuthorNameItem> {
+        let sections: [IntentItemSection<AuthorNameItem>] = [IntentItemSection<AuthorNameItem>(
+            "Italian Authors",
+            items: [IntentItem(AuthorNameItem(id: "0", name: "Alessandro Manzoni")),
+                    IntentItem(AuthorNameItem(id: "1", name: "Blessandro Manzoni")),]
+        ),
+                                                             IntentItemSection<AuthorNameItem>(
+            "Section 2",
+            items: [IntentItem(AuthorNameItem(id: "2", name: "Anton Chekhov")),
+                    IntentItem(AuthorNameItem(id: "3", name: "Fyodor Dostoevsky")),]
+        )]
+
+        return IntentItemCollection(sections: sections)
+        
+    }
+}
+
+extension AuthorNameItem {
+    static var allAuthors: [AuthorNameItem] = [
+        AuthorNameItem(id: "0", name: "Alessandro Manzoni"),
+        AuthorNameItem(id: "1", name: "Blessandro Manzoni"),
+        AuthorNameItem(id: "2", name: "Anton Chekhov"),
+        AuthorNameItem(id: "3", name: "Fyodor Dostoevsky"),
+    ]
+    
+    
+}
+
 
 // 可排序的操作项
 struct SortableItem: AppEntity, Hashable {

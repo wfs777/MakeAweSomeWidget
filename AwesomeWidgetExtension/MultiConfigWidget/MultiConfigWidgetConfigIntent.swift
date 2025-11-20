@@ -18,8 +18,10 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     )
     var items: [SortableItem]?
     
-    @Parameter(title: "Author Name",description: "选择并排序要显示的功能",requestValueDialog: .init("选择并排序要显示的功能"), optionsProvider: AuthorNamesOptionsProvider())
-    var authorName: String?
+    @Parameter(title: "Author Name",
+               description: "选择并排序要显示的功能"
+    )
+    var authorName: AuthorNameItem?
 
     @Parameter(
         title: "选择省份",
@@ -97,18 +99,18 @@ struct AuthorNamesOptionsProvider: DynamicOptionsProvider {
 //        \.$province
 //    ) var configIntent
     
-    func results() async throws -> ItemCollection<String> {
-        ItemCollection {
-            ItemSection("Italian Authors") {
-                "Dante Alighieri"
-                "Alessandro Manzoni"
-            }
-            ItemSection("Russian Authors") {
-                "Anton Chekhov"
-                "Fyodor Dostoevsky"
-            }
-        }
-    }
+//    func results() async throws -> ItemCollection<AuthorNameItem> {
+//        ItemCollection {
+//            ItemSection("Italian Authors") {
+//                AuthorNameItem(id: "0", name: "Alessandro Manzoni")
+//                AuthorNameItem(id: "1", name: "Blessandro Manzoni")
+//            }
+//            ItemSection("Russian Authors") {
+//                AuthorNameItem(id: "2", name: "Anton Chekhov")
+//                AuthorNameItem(id: "3", name: "Fyodor Dostoevsky")
+//            }
+//        }
+//    }
 }
 
 // 选项提供者
