@@ -94,7 +94,7 @@ struct SortableWidgetConfigIntent: WidgetConfigurationIntent {
     }
 }
 
-struct AuthorNamesOptionsProvider: DynamicOptionsProvider {
+//struct AuthorNamesOptionsProvider: DynamicOptionsProvider {
 //    @IntentParameterDependency<SortableWidgetConfigIntent>(
 //        \.$province
 //    ) var configIntent
@@ -111,7 +111,7 @@ struct AuthorNamesOptionsProvider: DynamicOptionsProvider {
 //            }
 //        }
 //    }
-}
+//}
 
 // 选项提供者
 struct SortableItemOptionsProvider: DynamicOptionsProvider {

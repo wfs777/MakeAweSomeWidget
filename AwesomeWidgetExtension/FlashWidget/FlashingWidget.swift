@@ -18,14 +18,8 @@ struct FlashToggleIntent: WidgetConfigurationIntent {
     func perform() async throws -> some IntentResult {
         let store = UserDefaults(suiteName: "group.com.yourapp")
 
-        // 开始闪动
-        store?.set(true, forKey: "isFlashing")
-
         // 模拟网络请求
         try await Task.sleep(nanoseconds: 3_000_000_000) // 3秒
-
-        // 停止闪动
-        store?.set(false, forKey: "isFlashing")
 
         return .result()
     }
@@ -64,9 +58,9 @@ struct FlashingToggleStyle: ToggleStyle {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 30, height: 30)
-                .foregroundColor(configuration.isOn ? .red : .gray)
-                .scaleEffect(configuration.isOn ? 1.2 : 1.0)
-                .animation(.easeInOut(duration: 0.5).repeatForever(autoreverses: true),value: configuration.isOn)
+//                .foregroundColor(configuration.isOn ? .red : .gray)
+//                .scaleEffect(configuration.isOn ? 1.2 : 1.0)
+//                .animation(.easeInOut(duration: 0.5).repeatForever(autoreverses: true),value: configuration.isOn)
     }
 }
 
@@ -78,6 +72,7 @@ struct FlashWidgetEntryView: View {
             Toggle(isOn: true, intent:FlashToggleIntent()){
             }.toggleStyle(FlashingToggleStyle())
         }
+        .invalidatableContent()
         .frame(width: 100, height: 100)
         .padding()
         .containerBackground(.clear, for: .widget)

@@ -72,13 +72,14 @@ struct AuthorNameQuery: EntityStringQuery {
     }
     
     func entities(matching string: String) async throws -> IntentItemCollection<AuthorNameItem> {
+        // 未实现搜索功能
         let sections: [IntentItemSection<AuthorNameItem>] = [IntentItemSection<AuthorNameItem>(
             "Italian Authors",
             items: [IntentItem(AuthorNameItem(id: "0", name: "Alessandro Manzoni")),
                     IntentItem(AuthorNameItem(id: "1", name: "Blessandro Manzoni")),]
         ),
                                                              IntentItemSection<AuthorNameItem>(
-            "Section 2",
+            "Russian Authors",
             items: [IntentItem(AuthorNameItem(id: "2", name: "Anton Chekhov")),
                     IntentItem(AuthorNameItem(id: "3", name: "Fyodor Dostoevsky")),]
         )]
@@ -93,7 +94,7 @@ struct AuthorNameQuery: EntityStringQuery {
                     IntentItem(AuthorNameItem(id: "1", name: "Blessandro Manzoni")),]
         ),
                                                              IntentItemSection<AuthorNameItem>(
-            "Section 2",
+            "Russian Authors",
             items: [IntentItem(AuthorNameItem(id: "2", name: "Anton Chekhov")),
                     IntentItem(AuthorNameItem(id: "3", name: "Fyodor Dostoevsky")),]
         )]
