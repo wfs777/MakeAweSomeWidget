@@ -16,5 +16,6 @@ struct AwesomeWidgetExtensionBundle: WidgetBundle {
         MultiConfigWidget()
         MyCarControlWidget()
         FlashWidget()
+        BuildWidget()
     }
 }

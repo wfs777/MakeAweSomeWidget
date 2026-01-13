@@ -29,7 +29,7 @@ struct WidgetEntry: TimelineEntry {
 struct WidgetView: View {
     @Environment(\.widgetFamily) var family
     var entry: WidgetProvider.Entry
-    
+    let lastUpdate = Date().addingTimeInterval(-60)
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             if entry.config.showTitle {
@@ -42,6 +42,11 @@ struct WidgetView: View {
                         .foregroundColor(.secondary)
                 }
             }
+            
+//            Text("静态时间：\(lastUpdate, style: .time)") // 显示 12:05
+//            Text("相对时间：\(lastUpdate, style: .relative)") // 自动跳动：1分10秒前... 1分11秒前...
+//            Text(lastUpdate, style: .timer)
+//            Text(lastUpdate, style: .relative)
             Spacer()
             HStack{
                 ForEach(entry.config.items!.prefix(itemCountForFamily)) { item in

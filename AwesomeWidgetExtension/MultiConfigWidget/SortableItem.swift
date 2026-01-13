@@ -1,5 +1,5 @@
 import AppIntents
-import SwiftUICore
+import SwiftUI
 import Foundation
 
 
